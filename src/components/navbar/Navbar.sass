@@ -1,0 +1,64 @@
+@import '../../variables'
+    
+nav
+    position: fixed
+    padding: 1.25rem 3.75rem
+    display: flex
+    width: 100%
+    justify-content: space-between
+    align-items: center
+    z-index: 4
+    .logo
+        cursor: pointer
+    .nav-links
+        width: 48%
+        ul
+            display: flex
+            justify-content: space-around
+            list-style-type: none
+            a
+                color: $textColor
+                &:hover,&:focus,&:active
+                    color:#FAC422
+    .nav-contact
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .basket
+            position: relative
+            width: 3.875rem
+            height: 3.875rem
+            padding-top: 12px
+            .basket-logo
+                font-size: 2rem
+                color:$textColor
+                cursor: pointer
+            .weird-logo
+                width: 1.3125rem
+                height: 1.125rem
+                border: 1px solid $textColor
+                background-color: $textColor
+                border-radius: 9px
+                font-size: 0.69rem
+                text-align: center
+                position: absolute
+                top: 0
+                right: 8px
+        .nav-btn
+            &:active
+                transform: scale(.98)
+            button
+                width: 11.125rem
+                height: 3.875rem
+                background-color: transparent
+                border: 1px solid $textColor
+                color: $textColor
+                cursor: pointer
+                &:hover
+                    transition: .7s ease-in  
+                    box-shadow: inset 15.5em 0 0 0 #000
+                    border: 1px solid #000
+            
+                
+            
+            
