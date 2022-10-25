@@ -4,10 +4,28 @@ import logo from '../../assets/img/logo.svg'
 import {SlBasket} from 'react-icons/sl'
 
 import './Navbar.sass'
+import { useEffect, useState } from 'react'
 
 const Navbar = () => {
+
+  const [navbar, setNavbar] = useState(false)
+
+  const changeBackground = () => {
+    if (window.scrollY >= 165) {
+      setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
+  }
+
+  useEffect(() => {
+    changeBackground()
+    // adding the event when scroll change background
+    window.addEventListener("scroll", changeBackground)
+  })
+  
   return (
-    <nav>
+    <nav className={navbar ? "nav black-nav" : "nav"}>
       <div className="logo">
         <img src={logo} alt="Logo" />
       </div>
