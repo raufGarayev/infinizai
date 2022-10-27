@@ -29,7 +29,7 @@ const Header = () => {
             <div className="header-main">
                 <div className="header-main_top">
                     <img src={Fire} alt="" />
-                    <h3>FUTURE OF eSPORTS</h3>
+                    <h3>FUTURE OF ESPORTS</h3>
                 </div>
                 <div className="header-main_head">
                     <h1>Unleash the Next Generation of Gaming</h1>
