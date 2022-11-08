@@ -28,7 +28,7 @@ const Header = () => {
             </MovingText>
             <div className="header-main">
                 <div className="header-main_top">
-                    <img src={Fire} alt="" />
+                    <img src={Fire} alt="fire" />
                     <h3>FUTURE OF ESPORTS</h3>
                 </div>
                 <div className="header-main_head">

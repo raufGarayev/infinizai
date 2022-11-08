@@ -1,0 +1,70 @@
+@import '../../../variables'
+
+.homeshop
+    background-image: url('../../../assets/img/shop-bg.png')
+    background-attachment: fixed
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    @include centering
+    flex-direction: column
+    width: 100%
+    padding: 5% 0
+    &_head
+        display: grid
+        place-items: center
+        width: 100%
+        &-top
+            @include centering
+            gap: .5rem
+            h3
+                color: $mainColor
+                font-size: 1rem
+                font-weight: 700
+        &-main
+            text-align: center
+            font-size: 4rem
+            font-weight: 900
+            color: $textColor
+            width: 40%
+            padding-bottom: 2%
+            text-transform: capitalize
+        &-desc
+            width: 45% !important
+            text-align: center
+            color: #afb0b2
+            width: 30%
+            line-height: 2rem
+            font-size: 1.25rem
+            font-weight: 500
+        
+    &_cards
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        gap: 2rem
+        padding:4rem
+        width: 100%
+        &-card
+            padding: 2.1875rem 2.25rem 2rem 5rem
+            width: 33.5%
+            min-width: 550px
+            height: 211px
+            background-color: rgba(255, 255, 255, 0.15)
+            border-radius: 1.25rem
+            position: relative
+            &-head
+                color: $textColor
+                font-size: 2rem
+                font-weight: 900
+                img
+                    position: absolute
+                    top: 2rem
+                    left: 2.5rem
+            &-desc
+                color: rgba(223, 223, 223, 0.8)
+                font-size: 1.125rem
+                font-weight: 500
+                line-height: 1.75rem
+                padding-top: 3%

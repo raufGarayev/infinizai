@@ -36,7 +36,6 @@ const Navbar = () => {
           <li><a href="#">About</a></li>
           <li><a href="#">Team</a></li>
           <li><a href="#">Shop</a></li>
-          <li><a href="#">Pages</a></li>
         </ul>
       </div>
 

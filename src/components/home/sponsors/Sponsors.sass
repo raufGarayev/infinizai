@@ -1,3 +1,5 @@
+@import '../../../variables.sass'
+    
 .sponsors
     padding: 8.125rem 3.75rem
     display: flex
@@ -19,21 +21,20 @@
         text-align: center
         margin-bottom: 2.5625rem
     &-companies
-        display: flex
-        justify-content: space-between
-        align-items: center
+        @include centering
+        gap: 40px
         width: 100%
+        flex-wrap: wrap
         transition: .5s ease-in-out
         &_cards
             width: .13.4%
             height: 5.5625rem
-            display: flex
-            justify-content: center
-            align-items: center
+            @include centering
             object-fit: contain
             border-radius: 10px
             transition: .5s ease-in-out
             transform: scale(1)
+            cursor: pointer
             img
                 width: 100%
             &:hover

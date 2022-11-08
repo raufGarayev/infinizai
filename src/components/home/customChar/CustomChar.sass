@@ -1,0 +1,73 @@
+@import '../../../variables'
+
+.customchar
+    background-color: #2a313c
+    @include centering
+    align-items: stretch
+    padding: 0 22.25rem
+    gap: 10rem
+    &_left
+        display: grid
+        place-content: center
+        width: 40%
+        &-img
+            img
+                
+    &_right
+        padding-top: 5%
+        width: 60%
+        &-head
+            &-top
+                display: flex
+                align-items: center
+                padding-bottom: 3%
+                gap: .5rem
+                h3
+                    color: $mainColor
+                    font-weight: 700
+                    font-size: 1rem
+            p
+                color: $textColor
+                font-size: 4rem
+                font-weight: 900
+                line-height: 4.625rem
+                padding-bottom: 5%
+        &-desc
+            color: $helpTextcolor
+            font-size: 1.25rem
+            font-weight: 500
+            line-height: 1.875rem
+            padding-bottom: 5%
+        &-slider
+            width: 596px
+            overflow: hidden
+            position: relative
+            img
+                height: 102px
+                width: 174px
+            .swiper-wrapper
+                padding: 20px 20px
+            .swiper-button-prev, .swiper-button-next
+                width: 2rem !important
+                height: 2rem !important
+                font-size: 1.25rem !important
+                border-radius: 100%
+                background-color: $mainColor
+                margin-left: -10px
+                margin-right: -10px
+                &::after
+                    text-align: center
+                    font-weight: 700
+                    font-size: 1rem
+                    color: $textColor
+
+.testdiv
+    border: 10px solid #3b3d46
+    border-radius: 20px
+    position: absolute
+    width: 194px
+    height: 122px
+    left: 10px
+    top: 10px
+            
+             

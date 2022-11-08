@@ -1,0 +1,53 @@
+@import '../../../variables'
+
+.cloudgaming
+    background-color: #000
+    padding: 10% 250px
+    @include centering
+    gap: 100px
+    &_left
+        width: 50%
+        &-head
+            &-top
+                display: flex
+                align-items: center
+                padding-bottom: 3%
+                gap: .5rem
+                h3
+                    color: $mainColor
+                    font-weight: 700
+                    font-size: 1rem
+            p
+                color: $textColor
+                font-size: 4rem
+                font-weight: 900
+                line-height: 4.625rem
+                padding-bottom: 5%
+        &-desc
+            color: $helpTextcolor
+            font-size: 1.25rem
+            font-weight: 500
+            line-height: 1.875rem
+            padding-bottom: 5%
+        &-button
+            button
+                width: 203px
+                height: 70px
+                cursor: pointer
+                background-color: $mainColor
+                color: $textColor
+                font-size: 1.125rem
+                font-weight: 700
+                &:active
+                    transform: scale(.99)
+                    outline: none
+                    border: none
+    &_right
+        display: grid
+        place-items: center
+        &-videoblock
+            width: 492px
+            height: 550px
+            overflow: hidden
+            border: 20px solid #20242b
+            border-radius: 20%
