@@ -1,0 +1,22 @@
+@import '../../variables.sass'
+
+.breadcrumb
+    height: 450px
+    background: url(../../assets/img/breadcrumb-bg.png)
+    @include centering
+    flex-direction: column
+    p
+        font-size: 4rem
+        font-weight: 900
+    &-dir
+        display: flex
+        align-items: center
+        gap: .5rem
+        padding-top: 2%
+        .bc-icon
+            font-size: 1.125rem
+        span
+            font-size: 1.125rem
+            font-weight: 500
+        .dir
+            color: $mainColor

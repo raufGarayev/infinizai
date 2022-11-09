@@ -5,6 +5,7 @@ import HomeShop from '../components/home/homeShop/HomeShop'
 import Sponsors from '../components/home/sponsors/Sponsors'
 import CustomChar from '../components/home/customChar/CustomChar'
 import GameTypes from '../components/home/gameTypes/GameTypes'
+import News from '../components/home/news/News'
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <CloudGaming />
       <CustomChar />
       <GameTypes />
+      <News />
     </>
   )
 }

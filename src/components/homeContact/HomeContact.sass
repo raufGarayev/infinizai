@@ -1,0 +1,42 @@
+@import '../../variables'
+
+.homecontact
+    background: url(../../assets/img/homecontact-bg.png) center (center/cover) no-repeat
+    @include centering
+    flex-direction: column
+    padding: 10% 0
+    &_head
+        width: 50rem
+        padding-bottom: 3%
+        h2
+            text-align: center
+            font-size: 4.5rem
+            font-weight: 900
+            line-height: 5.125rem
+    &_desc
+        width: 51rem
+        color: #555
+        font-size: 1.125rem
+        line-height: 1.75rem
+        padding-bottom: 3%
+        text-align: center
+    &_form
+        width: 670px
+        form
+            width: 100%
+            display: flex
+            justify-content: center
+            height: 80px
+            input
+                width: 450px
+                font-size: 1.125rem
+                border: none
+                padding: 5%
+                outline: none
+            button
+                color: $textColor
+                background-color: $mainColor
+                width: 220px
+                font-size: 1.125rem
+                font-weight: 700
+                border: none

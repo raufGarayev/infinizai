@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "name": "Sasha Kostyliev",
+        "nick": "s1mple",
+        "image": "teamimg/s1mple.webp"
+    },
+    {
+        "id": 1,
+        "name": "Denis Sharipov",
+        "nick": "electronic",
+        "image": "teamimg/denis.webp"
+    },
+    {
+        "id": 2,
+        "name": "Valerii Vakhovskyi",
+        "nick": "b1t",
+        "image": "teamimg/valerii.webp"
+    },
+    {
+        "id": 3,
+        "name":"Ilya Zalutskiy",
+        "nick": "Perfecto",
+        "image": "teamimg/ilya.webp"
+    },
+    {
+        "id": 4,
+        "name": "Viktor Orudzhev",
+        "nick": "sdy",
+        "image": "teamimg/viktor.webp"
+    },
+    {
+        "id": 5,
+        "name": "Ivan Kapustin",
+        "nick": "ubah",
+        "image": "teamimg/ivan.webp"
+    }
+]
