@@ -1,0 +1,29 @@
+@import '../../../variables'
+
+.results
+    @include centering
+    flex-direction: column
+    background-color: #fccc3d
+    padding: 5%
+    &_head
+        font-size: 3rem
+        font-weight: 900
+        position: relative
+        img
+            position: absolute
+            top: 95%
+            right: 0
+    &_desc
+        padding: 3% 0
+        width: 40%
+        text-align: center
+    &_numbers
+        text-align: center
+        @include centering
+        gap: 3rem
+        span
+            font-size: 4.5rem
+            font-weight: 900
+        p
+            text-transform: capitalize
+            letter-spacing: .3rem
