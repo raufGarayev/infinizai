@@ -6,6 +6,10 @@ export const ProductProvider = ({children}) => {
     const [image, setImage] = useState(null)
     const [pName, setPname] = useState(null)
     const [price, setPrice] = useState(null)
+    const [basket, setBasket] = useState([])
+    const [size, setSize] = useState("")
+    const [amount, setAmount] = useState(1)
+    const [basketOn, setBasketOn] = useState(false)
 
     const values = {
         image,
@@ -13,7 +17,15 @@ export const ProductProvider = ({children}) => {
         pName,
         setPname, 
         price,
-        setPrice
+        setPrice,
+        basket,
+        setBasket,
+        size,
+        setSize,
+        amount,
+        setAmount,
+        basketOn,
+        setBasketOn
     }
 
     return <ProductContext.Provider value={values}>{children}</ProductContext.Provider>

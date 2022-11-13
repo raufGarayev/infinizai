@@ -8,6 +8,7 @@ import Team from "./pages/Team";
 import Shop from "./pages/Shop";
 import ProductView from "./components/productView/ProductView";
 import { ProductProvider } from "./context/ProductContext";
+import Basket from "./components/basket/Basket";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <div className="container">
       <ProductProvider>
       <BrowserRouter>
+      <Basket />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}/>

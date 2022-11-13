@@ -1,6 +1,6 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import {Link} from 'react-router-dom'
+import ProductContext from '../../context/ProductContext'
 
 import logo from '../../assets/img/logo.svg'
 import {SlBasket} from 'react-icons/sl'
@@ -9,6 +9,12 @@ import './Navbar.sass'
 
 
 const Navbar = () => {
+
+  const {basket, setBasket, basketOn, setBasketOn} = useContext(ProductContext)
+
+  const toggleBasket = () => {
+    setBasketOn(true)
+  }
 
   const [navbar, setNavbar] = useState(false)
 
@@ -42,9 +48,9 @@ const Navbar = () => {
       </div>
 
       <div className="nav-contact">
-        <div className="basket">
-          <SlBasket className='basket-logo'/>
-          <div className="weird-logo">0</div>
+        <div onClick={toggleBasket} className="basketicon">
+          <SlBasket className='basketicon-logo'/>
+          <div className="weird-logo">{basket.length}</div>
         </div>
         <div className="nav-btn">
           <button>Contact Us</button>

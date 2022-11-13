@@ -11,7 +11,8 @@ const Products = () => {
 
     const prepareProduct = (e) => {
         setImage(e.target.parentElement.children[0].children[0].src)
-        console.log(image)
+        setPname(e.target.parentElement.children[1].innerText)
+        setPrice(e.target.parentElement.children[2].innerText)
     }
 
   return (
@@ -25,7 +26,7 @@ const Products = () => {
                         </div>
                         <p className='name'>{p.name}</p>
                         <p className='price'>{p.price}</p>
-                        <Link onClick={prepareProduct} to=''>View Product</Link>
+                        <Link onClick={prepareProduct} to='/oneproduct'>View Product</Link>
                     </div>
                 ))
             }
