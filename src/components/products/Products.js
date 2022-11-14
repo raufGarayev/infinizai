@@ -7,12 +7,13 @@ import ProductContext from '../../context/ProductContext'
 
 const Products = () => {
 
-    const {image, setImage, pName, setPname, price, setPrice} = useContext(ProductContext)
+    const {image, setImage, pName, setPname, price, setPrice, id, setId} = useContext(ProductContext)
 
     const prepareProduct = (e) => {
         setImage(e.target.parentElement.children[0].children[0].src)
         setPname(e.target.parentElement.children[1].innerText)
         setPrice(e.target.parentElement.children[2].innerText)
+        setId(e.target.parentElement.getAttribute("listid"))
     }
 
   return (
@@ -20,7 +21,7 @@ const Products = () => {
         <div className="products_list">
             {
                 products.map(p => (
-                    <div key={p.id} className="products_list-card">
+                    <div key={p.id} listid={p.id} className="products_list-card">
                         <div className="products_list-card-img">
                             <img src={p.image} alt="img" />
                         </div>

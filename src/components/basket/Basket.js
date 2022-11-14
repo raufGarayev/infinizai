@@ -19,8 +19,8 @@ const Basket = () => {
 
         {
 
-                basket.map(item=>(
-                    <div className="basket_product">
+                basket.map((item, i)=>(
+                    <div key={i} className="basket_product">
                     <div className="basket_product-img">
                         <img src={item.image} alt={item.pName} />
                     </div>

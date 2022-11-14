@@ -6,6 +6,7 @@ export const ProductProvider = ({children}) => {
     const [image, setImage] = useState(null)
     const [pName, setPname] = useState(null)
     const [price, setPrice] = useState(null)
+    const [id, setId] = useState(null)
     const [basket, setBasket] = useState([])
     const [size, setSize] = useState("")
     const [amount, setAmount] = useState(1)
@@ -24,6 +25,8 @@ export const ProductProvider = ({children}) => {
         setSize,
         amount,
         setAmount,
+        id,
+        setId,
         basketOn,
         setBasketOn
     }

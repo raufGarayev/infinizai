@@ -7,16 +7,32 @@ const ProductView = () => {
 
   const sizeInput = useRef()
   const amountInput = useRef()
+  const theDiv = useRef()
 
-  const {image, pName, price, basket, setBasket, size, setSize, amount, setAmount} = useContext(ProductContext)
+  const {image, pName, price, basket, setBasket, size, setSize, amount, setAmount, id} = useContext(ProductContext)
 
+
+  const basketItem = basket.find(item=>item.id === theDiv.current.getAttribute('listid') )
   const prepareBasket = (e) => {
     e.preventDefault()
-    setBasket([...basket, {
-      pName,
-      price,
-      image
-    }])
+    const checkBasket = basketItem
+
+    if(checkBasket) {
+      // amount key elave etdik
+
+      // spread operator ...
+      setBasket([...basket.filter(item=>item.id!== theDiv.current.getAttribute('listid')), checkBasket])
+      // ['Mehdi', "Hesen", "Hesen Memmedsoy"]
+    } else {
+      setBasket([...basket, {
+        pName,
+        price,
+        image,
+        id
+      }])
+    }
+
+
     setSize(sizeInput.current.value)
     
   }
@@ -28,7 +44,7 @@ const ProductView = () => {
   return (
     <section className='productview'>
         <Breadcrumb bc={"Shop"} />
-        <div className="productview_buy">
+        <div ref={theDiv} listid={id} className="productview_buy">
           <div className="productview_buy-img">
             <img src={image} alt={pName} />
           </div>
