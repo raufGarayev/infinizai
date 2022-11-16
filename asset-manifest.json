@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/infinizai/static/css/main.fe250f4d.css",
+    "main.css": "/infinizai/static/css/main.701b7392.css",
     "main.js": "/infinizai/static/js/main.d5f5b382.js",
     "static/media/shop-bg.png": "/infinizai/static/media/shop-bg.2a1701a62a69885d6a8f.png",
     "static/media/homecontact-bg.png": "/infinizai/static/media/homecontact-bg.fc658a1042bc620e66bf.png",
@@ -35,11 +35,11 @@
     "static/media/underline-contact.svg": "/infinizai/static/media/underline-contact.613ffc7baac1c92ce3c93986f98f6b86.svg",
     "static/media/underline.svg": "/infinizai/static/media/underline.4aa7d1d2fb3b920b757837a014a3a14c.svg",
     "static/media/underline-sponsors.svg": "/infinizai/static/media/underline-sponsors.6c4ffd646b50a03fa6f8586864cdaa6d.svg",
-    "main.fe250f4d.css.map": "/infinizai/static/css/main.fe250f4d.css.map",
+    "main.701b7392.css.map": "/infinizai/static/css/main.701b7392.css.map",
     "main.d5f5b382.js.map": "/infinizai/static/js/main.d5f5b382.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe250f4d.css",
+    "static/css/main.701b7392.css",
     "static/js/main.d5f5b382.js"
   ]
 }
