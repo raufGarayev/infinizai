@@ -24,6 +24,7 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/oneproduct" element={<ProductView />} />
+          <Route path="/infinizai" element={<Home />} />
         </Routes>
         <HomeContact />        
         <Footer />
