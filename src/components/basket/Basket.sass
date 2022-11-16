@@ -25,6 +25,8 @@
     &_product
         @include centering
         gap: 2rem
+        padding-top: 5%
+        position: relative
         &-img
             width: 110px
             height: 110px
@@ -34,7 +36,7 @@
                 height: 100%
                 object-fit: contain
         &-desc
-            width: 33%
+            width: 50%
             .name
                 font-size: 1.25rem
                 font-weight: 700
@@ -42,12 +44,13 @@
                 font-size: 1.25rem
                 font-weight: 700
                 color: $mainColor
-        &-amount
-            width: 3rem
-            height: 2rem
-            input
-                width: 100%
-                height: 100%
+        .trash
+            position: absolute
+            top: 30%
+            right: 5%
+            color: #f05858
+            cursor: pointer
+            z-index: 1
 
 .active
     display: block
