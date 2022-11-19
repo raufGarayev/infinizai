@@ -3,36 +3,36 @@
         "id": 0,
         "name": "NAVI x PUMA 2022 Pro Kit Gameday Jersey",
         "price": "85€",
-        "image": "products/gameday_1.1200x1200.png"
+        "image": "/products/gameday_1.1200x1200.png"
     },
     {
         "id": 1,
         "name": "NAVI x PUMA 2022 T-shirt",
         "price": "32€",
-        "image": "products/navi54542.1200x1200.png"
+        "image": "/products/navi54542.1200x1200.png"
     },
     {
         "id": 2,
         "name": "Oversize T-shirt Brave We Be Brave Like Ukraine",
         "price": "36€",
-        "image": "products/navi52532.1200x1200.png"
+        "image": "/products/navi52532.1200x1200.png"
     },
     {
         "id": 3,
         "name": "NAVI x PUMA 2022 Essential Hoodie",
         "price": "65€",
-        "image": "products/navi54387.1200x1200.png"
+        "image": "/products/navi54387.1200x1200.png"
     },
     {
         "id": 4,
         "name": "NAVI x PUMA 2022 Gaming Hoodie",
         "price": "85€",
-        "image": "products/navi54456.1200x1200.png"
+        "image": "/products/navi54456.1200x1200.png"
     },
     {
         "id": 5,
         "name":"Oversize hoodie Brave We Sunrise",
         "price": "60€",
-        "image": "products/navi52287.1200x1200.png"
+        "image": "/products/navi52287.1200x1200.png"
     }
 ]

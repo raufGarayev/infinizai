@@ -1,6 +1,7 @@
-import {useContext, useRef, useState} from 'react'
+import {useContext, useState, useEffect} from 'react'
 import ProductContext from '../../context/ProductContext'
-import {FaTrashAlt} from 'react-icons/fa'
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+
 import './Basket.sass'
 
 const Basket = () => {
@@ -19,8 +20,24 @@ const Basket = () => {
 
             setBasket([...basketWithoutCurrent])
         }
-            
     }
+    
+    const [characters, updateCharacters] = useState(basket);
+
+    useEffect(() => {
+        updateCharacters(basket)
+    }, [basket])
+    
+
+    function handleOnDragEnd(result) {
+        if (!result.destination) return;
+    
+        const items = Array.from(characters);
+        const [reorderedItem] = items.splice(result.source.index, 1);
+        items.splice(result.destination.index, 0, reorderedItem);
+    
+        updateCharacters(items);
+      }
 
   return (
     <div className={basketOn ? 'basket active' : 'basket'}>
@@ -28,25 +45,33 @@ const Basket = () => {
             <p>Your Cart</p>
             <button onClick={toggleBasket}>X</button>
         </div>
-
-        {
-                basket.map(item => (
-                    
-                    <div  key={item.id} listid={item.id} className="basket_product">
-                        <div className="basket_product-img">
-                            <img src={item.image} alt={item.pName} />
-                        </div>
-                        <div className="basket_product-desc">
-                            <p className='name'>{item.pName}</p>
-                            <p className='price'>{item.price} * {item.amount} = {item.price.slice(0, -1)*item.amount}€ </p>
-                            <p className='size'>Size: <span>{item.size}</span></p>
-                        </div>
-                        <p onClick={removeItem} className='trash' >X</p>
-                    
-                    </div>
-                ))
-
-        }
+        <DragDropContext onDragEnd={handleOnDragEnd}>
+            <Droppable droppableId="characters">
+                {(provided) => (
+                    <ul {...provided.droppableProps} ref={provided.innerRef}>
+                        {characters.map((item, index) => (
+                            <Draggable key={item.id}  draggableId={item.id} index={index}>
+                                {(provided) => (
+                                    <li  ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
+                                        <div  listid={item.id} className="basket_product">
+                                            <div className="basket_product-img">
+                                                <img src={item.image} alt={item.pName} />
+                                            </div>
+                                            <div className="basket_product-desc">
+                                                <p className='name'>{item.pName}</p>
+                                                <p className='price'>{item.price} * {item.amount} = {item.price.slice(0, -1)*item.amount}€ </p>
+                                                <p className='size'>Size: <span>{item.size}</span></p>
+                                            </div>
+                                            <p onClick={removeItem} className='trash' >X</p>
+                                        </div>
+                                    </li>
+                                )}
+                            </Draggable>
+                        ))}
+                    </ul>
+                )}
+           </Droppable>
+        </DragDropContext>
     </div>
   )
 }
