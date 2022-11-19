@@ -1,4 +1,4 @@
-import {useRef, useContext } from 'react'
+import {useContext, useEffect } from 'react'
 import './Products.sass'
 import products from '../../products.json'
 import { Link } from 'react-router-dom'
@@ -7,7 +7,7 @@ import ProductContext from '../../context/ProductContext'
 
 const Products = () => {
 
-    const {image, setImage, pName, setPname, price, setPrice, id, setId} = useContext(ProductContext)
+    const {image, setImage, pName, setPname, price, setPrice, id, setId, viewedProduct, setViewedProduct} = useContext(ProductContext)
 
     const prepareProduct = (e) => {
         setImage(e.target.parentElement.children[0].children[0].src)
@@ -27,7 +27,7 @@ const Products = () => {
                         </div>
                         <p className='name'>{p.name}</p>
                         <p className='price'>{p.price}</p>
-                        <Link onClick={prepareProduct} to='/oneproduct'>View Product</Link>
+                        <Link onClick={prepareProduct} to={p.name.replace(/ /g,'-')}>View Product</Link>
                     </div>
                 ))
             }

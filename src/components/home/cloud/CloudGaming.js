@@ -24,7 +24,7 @@ const CloudGaming = () => {
         <div className="cloudgaming_right">
             <div className="cloudgaming_right-videoblock">
 
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xaudh5W9dLU?start=16&border=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xaudh5W9dLU?start=16&border=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowFullScreen></iframe>
             </div>
         </div>
     </section>

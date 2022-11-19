@@ -68,6 +68,7 @@ const Basket = () => {
                                 )}
                             </Draggable>
                         ))}
+                        {provided.placeholder}
                     </ul>
                 )}
            </Droppable>

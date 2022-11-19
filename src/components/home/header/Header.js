@@ -1,5 +1,5 @@
 import React from 'react'
-import MovingText from 'react-moving-text'
+import MovingComponent from 'react-moving-text'
 
 import Fire from '../../../assets/img/fire.svg'
 import Underline from '../../../assets/img/underline.svg'
@@ -10,14 +10,14 @@ const Header = () => {
   return (
     <header>
         <div className="left-header">
-            <MovingText
-                type="fadeInFromLeft"
-                duration="1000ms"
-                delay="0s"
-                direction="normal"
-                timing="ease"
-                iteration="1"
-                fillMode="none">
+        <MovingComponent
+            type="fadeIn"
+            duration="1000ms"
+            delay="0s"
+            direction="normal"
+            timing="ease-in-out"
+            iteration="1"
+            fillMode="none">
                 <div className="social-links">
                     <ul>
                         <li><a href="#">Facebook</a></li>
@@ -25,7 +25,7 @@ const Header = () => {
                         <li><a href="#">Twitch</a></li>
                     </ul>
                 </div>
-            </MovingText>
+        </MovingComponent>
             <div className="header-main">
                 <div className="header-main_top">
                     <img src={Fire} alt="fire" />

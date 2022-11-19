@@ -1,13 +1,12 @@
-import {useContext, useRef} from 'react'
+import {useContext, useEffect} from 'react'
 import Breadcrumb from '../breadcrumb/Breadcrumb'
 import './ProductView.sass'
 import ProductContext from '../../context/ProductContext'
 
 const ProductView = () => {
 
-  const theProduct = useRef()
 
-  const {image, pName, price, basket, setBasket, size, setSize, amount, setAmount, id} = useContext(ProductContext)
+  const {image, pName, price, basket, setBasket, size, setSize, amount, setAmount, id, viewedProduct, setViewedProduct} = useContext(ProductContext)
 
   const prepareBasket = (e) => {
     e.preventDefault()
@@ -40,7 +39,7 @@ const ProductView = () => {
   return (
     <section className='productview'>
         <Breadcrumb bc={"Shop"} />
-        <div ref={theProduct} listid={id} className="productview_buy">
+        <div listid={id} className="productview_buy">
           <div className="productview_buy-img">
             <img src={image} alt={pName} />
           </div>

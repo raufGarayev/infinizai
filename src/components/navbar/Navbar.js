@@ -10,7 +10,7 @@ import './Navbar.sass'
 
 const Navbar = () => {
 
-  const {basket, setBasket, basketOn, setBasketOn} = useContext(ProductContext)
+  const {basket, setBasketOn} = useContext(ProductContext)
 
   const toggleBasket = () => {
     setBasketOn(true)
