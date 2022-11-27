@@ -15,7 +15,7 @@ const CloudGaming = () => {
                 <p>The New Era Of Cloud Gaming Here</p>
             </div>
             <div className="cloudgaming_left-desc">
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia</p>
+              <p>Cloud gaming platforms operate in a similar manner to remote desktops and video on demand services; games are stored and executed remotely on a provider's dedicated hardware, and streamed as video to a player's device via client software. The client software handles the player's inputs, which are sent back to the server and executed in-game.</p>
             </div>
             <div className="cloudgaming_left-button">
               <button>Explore More</button>

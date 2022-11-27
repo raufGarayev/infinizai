@@ -33,7 +33,7 @@ const CustomChar = () => {
                 <p>Customize Your Own Character</p>
             </div>
             <div className="customchar_right-desc">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
+                <p>Make your own fire-breathing Dragon born today. Equip them with legendary weapons and armor sets. Ready for battle!</p>
             </div>
             <div className="customchar_right-slider">
             <Swiper 
@@ -48,7 +48,6 @@ const CustomChar = () => {
                 modules={[Autoplay, Navigation]}
                 className="mySwiper"
             >   
-                <div className="testdiv"></div>
                 <SwiperSlide ><img src={Slider1} alt="slide" /></SwiperSlide>
                 <SwiperSlide><img src={Slider2} alt="slide" /></SwiperSlide>
                 <SwiperSlide><img src={Slider3} alt="slide" /></SwiperSlide>

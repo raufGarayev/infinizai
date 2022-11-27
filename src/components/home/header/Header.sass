@@ -2,6 +2,7 @@
     
 header
     display: flex
+    flex-wrap: wrap
     .left-header
         background-color: #000
         width: 56%
@@ -31,7 +32,7 @@ header
                         color: $mainColor
         .header-main
             padding: 18.56rem 0 0 3.75rem
-            .header-main_top
+            &_top
                 display: flex
                 align-items: center
                 h3
@@ -39,9 +40,8 @@ header
                     font-weight: 700
                     font-size: 1rem
                     padding-left: .5rem
-            .header-main_head
+            &_head
                 width: 41rem
-                height: 16.125rem
                 position: relative
                 h1
                     margin-top: 1rem
@@ -54,13 +54,13 @@ header
                     position: absolute
                     top: 65%
                     left: 33%
-            .header-main_desc
+            &_desc
                 margin-top: 2rem
                 width: 38.44rem
                 p
                     color: #999999
                     font-size: 1.125rem
-            .header-main_btns
+            &_btns
                 display: flex
                 margin-top: 3rem
                 .explore, .view-team
@@ -79,14 +79,13 @@ header
                     
                 .view-team
                     background-color: transparent
-
     .right-header
         background-color: $mainColor
         width: 44%
         padding-bottom: 15.625rem
         padding-right: 16.25rem
         position: relative
-        .right-header_img
+        &_img
             position: absolute
             top: 296px
             left: -87px
@@ -97,7 +96,6 @@ header
             img
                 width: 100%
                 max-width: 660px
-                height: auto
             &:hover 
                 transform: translate(1rem, -2ex)
             

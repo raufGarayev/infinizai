@@ -12,7 +12,7 @@ const HomeShop = () => {
           <h3>FUTURE OF ESPORTS</h3>
         </div>
         <p className='homeshop_head-main'>Your one stop shop gaming needs!</p>
-        <p className='homeshop_head-desc'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+        <p className='homeshop_head-desc'>Each partnership with the NAVI team is an individual company story.</p>
       </div>
       <div className="homeshop_cards">
         <div className="homeshop_cards-card">

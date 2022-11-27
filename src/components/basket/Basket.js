@@ -21,22 +21,22 @@ const Basket = () => {
             setBasket([...basketWithoutCurrent])
         }
     }
-    
-    const [characters, updateCharacters] = useState(basket);
+
+    const [items, updateItems] = useState(basket);
 
     useEffect(() => {
-        updateCharacters(basket)
+        updateItems(basket)
     }, [basket])
     
 
     function handleOnDragEnd(result) {
         if (!result.destination) return;
     
-        const items = Array.from(characters);
-        const [reorderedItem] = items.splice(result.source.index, 1);
-        items.splice(result.destination.index, 0, reorderedItem);
+        const prods = Array.from(items);
+        const [reorderedItem] = prods.splice(result.source.index, 1);
+        prods.splice(result.destination.index, 0, reorderedItem);
     
-        updateCharacters(items);
+        updateItems(prods);
       }
 
   return (
@@ -46,10 +46,10 @@ const Basket = () => {
             <button onClick={toggleBasket}>X</button>
         </div>
         <DragDropContext onDragEnd={handleOnDragEnd}>
-            <Droppable droppableId="characters">
+            <Droppable droppableId="items">
                 {(provided) => (
                     <ul {...provided.droppableProps} ref={provided.innerRef}>
-                        {characters.map((item, index) => (
+                        {items.map((item, index) => (
                             <Draggable key={item.id}  draggableId={item.id} index={index}>
                                 {(provided) => (
                                     <li  ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
@@ -72,6 +72,7 @@ const Basket = () => {
                     </ul>
                 )}
            </Droppable>
+
         </DragDropContext>
     </div>
   )

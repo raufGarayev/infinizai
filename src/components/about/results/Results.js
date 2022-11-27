@@ -44,10 +44,9 @@ const Results = () => {
         <img src={UnderlineSponsors} alt="underline" />
       </div>
       <div className="results_desc">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis, nec donec in morbi pulvinar. Enim non pulvinar neque.</p>
+        <p>It was a difficult year for both NAVI and esports in general. There were only a few LAN events and most competition moved online due to the COVID-19 pandemic.</p>
       </div>
       <div className="results_numbers">
-
         <div className="results_numbers-data">
           <span ref={tourns} className='counter'></span>
           <p>Tournaments</p>

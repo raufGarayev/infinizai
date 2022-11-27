@@ -1,4 +1,4 @@
-import {useContext, useEffect} from 'react'
+import {useContext, useEffect, useLayoutEffect} from 'react'
 import Breadcrumb from '../breadcrumb/Breadcrumb'
 import './ProductView.sass'
 import ProductContext from '../../context/ProductContext'
@@ -36,17 +36,26 @@ const ProductView = () => {
     setAmount(e.target.value)
   }
 
+  useEffect(() => {
+    if(image)
+      localStorage.setItem('viewedProduct', JSON.stringify({image, pName, price, id}))
+  }, [])
+
+  useEffect(() => {
+    setViewedProduct(JSON.parse(localStorage.getItem('viewedProduct')))
+  }, [])
+
   return (
     <section className='productview'>
         <Breadcrumb bc={"Shop"} />
         <div listid={id} className="productview_buy">
           <div className="productview_buy-img">
-            <img src={image} alt={pName} />
+            <img src={viewedProduct.image} alt={viewedProduct.pName} />
           </div>
           <div className="productview_buy-desc">
             <div className="productview_buy-desc-nameprice">
-              <p className='name'>{pName}</p>
-              <p className='price'>{price}</p>
+              <p className='name'>{viewedProduct.pName}</p>
+              <p className='price'>{viewedProduct.price}</p>
             </div>
             <div className="productview_buy-desc-form">
               <form onSubmit={prepareBasket}>

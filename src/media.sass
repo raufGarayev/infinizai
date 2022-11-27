@@ -1,9 +1,301 @@
-@media (max-width: 1080px)
+@import './variables'
+
+@media (max-width: 767px)
+    header
+        .left-header
+            padding: 3% !important
+            .social-links
+                display: none
+            .header-main
+                padding: 0 !important
+                &_head
+                    width: 100% !important
+                    h1
+                        font-size: 2rem !important
+                        line-height: 3rem !important
+                    img
+                        display: none
+                &_desc
+                    width: 100% !important
+                &_btns
+                    display: block !important
+                    .explore, .view-team
+                        width: 100% !important
+                        height: 3rem
+        .right-header
+            &_img
+                &:hover 
+                    transform: translate(0, 0) !important
+    .customchar
+        padding: 0 !important
+        gap: 0 !important
+    .cloudgaming
+        padding: 2% !important
+        &_right
+            &-videoblock
+                width: 95% !important
+    .homecontact
+        &_head
+            width: 100% !important
+        &_desc
+            width: 90% !important
+        &_form
+            width: 95% !important
+            form
+                display: block !important
+                input
+                    width: 100% !important
+                    height: 50%
+                button
+                    width: 100% !important
+                    height: 50% !important
+    .homeshop
+        &_cards
+            &-card
+                padding: 1.5rem 3rem 2rem 5rem !important
+                &-head
+                    font-size: 1rem !important
+                    font-weight: 700 !important
+                &-desc
+                    font-size: .75rem !important
+    .news
+        &_head
+            &-main
+                width: 100% !important
+    .gametypes
+        &_left, &_right, &_mid
+            &-desc
+                text-align: center !important
+                width: 50% !important
+                font-size: 1rem !important
+                img
+                    width: 100%
+    .sponsors
+        &-header
+            img
+                display: none
+    .aboutus
+        &_head
+            width: 90% !important
+    .contactForm
+        form
+            .form-top
+                &-name, &-last
+                    width: 100% !important
+                    input
+                        margin-bottom: 5% !important
+    .basket
+        &_head
+            p
+                font-size: 1.5rem !important
+                font-weight: 700 !important
+            button
+                font-size: 1.5rem !important
+        &_product
+            &-desc
+            .name 
+                font-size: 1rem !important
+                font-weight: 500 !important
+            .price
+                font-size: 1rem !important
+                font-weight: 500 !important
+    .breadcrumb
+        height: 225px !important
+        padding-top: 100px
+        p
+            font-size: 2.5rem !important
+            font-weight: 700 !important
+
+@media (max-width: 1368px)
+    .nav
+        justify-content: space-around !important
+        background-color: #000
+        position: relative
+        &-toggler
+            display: block !important
+            border: none
+            background-color: transparent
+            font-size: 1.5rem
+            color: $textColor
+            border: 1px solid $textColor
+            width: 3rem
+            height: 3rem
+        &-links
+            display: none
+            &-mob
+                height: 10rem
+                ul
+                    display: flex
+                    justify-content: center
+                    flex-direction: column
+                    align-items: center
+                    list-style-type: none
+                    height: 100%
+                    li
+                        border-bottom: 1px solid #fff
+                        width: 100%
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        padding: 1%
+                    a
+                        color: $textColor
+                        font-weight: 500
+                        line-height: 26px
+                        
+        &-btn
+            display: none !important
+        .basketicon
+            position: absolute !important
+            right: 15%
     .news
         padding: 7% 5% !important
+        &_head
+            flex-direction: column
+            p
+                font-size: 2.5rem !important
+                line-height: 3rem !important
+                font-weight: 700 !important
         &_blogs
+            &-main
+                width: 100% !important
             &-secondary
-                
-                
+                width: 100% !important
+                padding-top: 5%
                 p
                     font-size: 1rem !important
+                &-blog
+                    padding-top: 5%
+    header
+        .left-header
+            width: 100% !important
+            .header-main
+                padding-top: 10rem !important
+        .right-header
+            width: 100% !important
+            height: 500px
+            padding: 0 !important
+            @include centering
+            &_img
+                @include centering
+                position: static !important
+                
+    .cloudgaming
+        &_left
+            width: 100% !important
+            &-head
+                p
+                    font-size: 2.5rem !important
+                    line-height: 3rem !important
+        &_right
+            padding-top: 10%
+            width: 100% !important
+    .customchar
+        flex-direction: column !important
+        gap: 12vw !important
+        padding: 0 5% !important
+        &_left
+            width: auto !important
+        &_right
+            padding: 0 !important
+            width: 100% !important
+            &-head
+                p
+                    font-size: 2.5rem !important
+                    line-height: 3rem !important
+    .homecontact
+        &_head
+            img
+                display: none
+            h2
+                font-size: 2.5rem !important
+                line-height: 3rem !important
+    .footer
+        padding: 1% !important
+        &_top
+            &-first-col, &-second-col, &-third-col,  &-fourth-col
+                padding-top: 5%
+                &-desc
+                    padding-top: 4% !important
+                &-head
+                    padding-bottom: 5% !important
+                &-list
+                    ul
+                        li
+                            padding-bottom: 5% !important
+            &-first-col
+                width: 100% !important
+            &-second-col, &-third-col,  &-fourth-col
+                width: 33.3% !important
+            &-fourth-col
+                min-width: 300px
+
+            
+    .gametypes
+        justify-content: center
+        &_left, &_mid, &_right
+            width: 50% !important
+            height: 50% !important
+    .homeshop
+        &_head
+            &-main
+                width: 100% !important
+                font-size: 2rem !important
+                line-height: 3rem !important
+        &_cards
+            padding:4rem 15% !important
+            &-card
+                width: 100% !important
+    .sponsors
+        &-desc
+            width: 70% !important
+    .aboutus
+        &_head
+            p
+                font-size: 3rem !important
+                font-weight: 700 !important
+        &_video
+            width: 90% !important
+        &_text
+            width: 90% !important
+    .results
+        &_numbers
+            &-data
+                width: 34%
+                span
+                    font-weight: 700 !important
+    .contactForm
+        justify-content: left !important
+        &_left
+            width: 100% !important
+        form
+            width: 100% !important
+    .productview
+        &_buy
+            &-desc
+                width: 90% !important
+                &-nameprice
+                    .name
+                        font-size: 2.5rem !important
+                        font-weight: 700 !important
+                        padding-bottom: 3% !important
+                    .price
+                        font-size: 2rem !important
+                        font-weight: 500 !important
+                        padding-bottom: 3% !important
+    .basket
+        width: 70% !important
+    .teamlist
+        &_head
+            p
+                font-size: 3rem !important
+                font-weight: 700 !important
+    .results
+        &_head
+            img
+                display: none
+        &_desc
+            width: 80% !important
+            padding-top: 5% !important
+        &_numbers
+            align-items: stretch !important
