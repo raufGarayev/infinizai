@@ -24,7 +24,7 @@ const Products = () => {
                 products.map(p => (
                     <div key={p.id} listid={p.id} className="products_list-card">
                         <div className="products_list-card-img">
-                            <img src={process.env.PUBLIC_URL + p.image} alt="img" />
+                            <img src={process.env.PUBLIC_URL + p.image} alt={p.name} />
                         </div>
                         <p className='name'>{p.name}</p>
                         <p className='price'>{p.price}</p>

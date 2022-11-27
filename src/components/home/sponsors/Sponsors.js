@@ -18,7 +18,7 @@ const Sponsors = () => {
         </div>
 
         <div className="sponsors-desc">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis, nec donec in morbi pulvinar. Enim non pulvinar neque.</p>
+            <p>Each partnership with the NAVI team is an individual company story. Each time, our in-house marketing agency develops a customized campaign to best introduce the partner to the fan community and help achieve the necessary business and marketing goals.</p>
         </div>
 
         <div className="sponsors-companies">

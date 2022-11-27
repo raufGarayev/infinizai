@@ -17,7 +17,7 @@ const TeamList = () => {
             {
                 team.map((t) => (
                     <div key={t.id} className='teamlist_card'>
-                        <img src={process.env.PUBLIC_URL + t.image} alt="img" />
+                        <img src={process.env.PUBLIC_URL + t.image} alt={t.name} />
                         <div className="teamlist_card-name">
                             <p className='name'>{t.name}</p>
                             <p className='nick'>{t.nick}</p>

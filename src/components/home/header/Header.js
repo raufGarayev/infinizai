@@ -36,7 +36,7 @@ const Header = () => {
                     <img src={Underline} alt="underline" />
                 </div>
                 <div className="header-main_desc">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis, nec donec in morbi pulvinar. Enim non pulvinar neque.</p>
+                    <p>An amazing, incredible and unstoppable eSports club founded in 2009.</p>
                 </div>
                 <div className="header-main_btns">
                     <button className="explore">Explore More</button>
@@ -47,7 +47,7 @@ const Header = () => {
 
         <div className="right-header">
             <div className="right-header_img">
-                <img src={HeaderGaming} alt="" />
+                <img src={HeaderGaming} alt="headergaming" />
             </div>
         </div>
     </header>
